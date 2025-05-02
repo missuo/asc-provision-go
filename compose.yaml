@@ -6,12 +6,12 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - APPLE_KEY_ID=${APPLE_KEY_ID}
-      - APPLE_ISSUER_ID=${APPLE_ISSUER_ID}
-      - APPLE_PRIVATE_KEY_PATH=/root/${APPLE_PRIVATE_KEY_FILENAME}
-      - APPLE_BUNDLE_ID=${APPLE_BUNDLE_ID}
+      - APPLE_KEY_ID=A1B2C3D4E5
+      - APPLE_ISSUER_ID=00000000-1111-2222-3333-444444444444
+      - APPLE_PRIVATE_KEY_PATH=/root/AuthKey_A1B2C3D4E5.p8
+      - APPLE_BUNDLE_ID=com.example.app
       - PORT=8080
-      - API_KEY=${API_KEY}
+      - API_KEY=your-secure-api-key-here
     volumes:
-      - ./private_keys:/root/private_keys
+      - ./AuthKey_A1B2C3D4E5.p8:/root/AuthKey_A1B2C3D4E5.p8
     restart: unless-stopped
