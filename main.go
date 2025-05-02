@@ -2,7 +2,7 @@
  * @Author: Vincent Yang
  * @Date: 2025-05-02 00:49:14
  * @LastEditors: Vincent Yang
- * @LastEditTime: 2025-05-02 01:24:17
+ * @LastEditTime: 2025-05-02 01:27:04
  * @FilePath: /asc-provision-go/main.go
  * @Telegram: https://t.me/missuo
  * @GitHub: https://github.com/missuo
@@ -40,6 +40,9 @@ func main() {
 
 	// Create controller
 	controller := handlers.NewController(apiClient)
+
+	// Set Release Mode
+	gin.SetMode(gin.ReleaseMode)
 
 	// Set up Gin router
 	r := gin.Default()
