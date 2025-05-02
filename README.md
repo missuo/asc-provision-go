@@ -6,6 +6,11 @@
 
 A Go API server for managing Apple Developer Account devices and provisioning profiles.
 
+## TODO
+
+- [ ] Add dashboard for managing devices and profiles
+- [ ] Integrate with [resign](https://github.com/missuo/resign)
+
 ## Integration
 
 I have already integrated this API into my iOS app, you can see the preview below.
