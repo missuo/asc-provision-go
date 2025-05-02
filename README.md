@@ -12,7 +12,7 @@ I have already integrated this API into my iOS app, you can see the preview belo
 
 ![Preview](./Screenshots/Preview.JPEG)
 
-[Devices](https://github.com/missuo/Devices)
+Open source at [https://github.com/missuo/Devices](https://github.com/missuo/Devices)
 
 ## Features
 
