@@ -1,0 +1,17 @@
+services:
+  asc-provision-go:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - APPLE_KEY_ID=${APPLE_KEY_ID}
+      - APPLE_ISSUER_ID=${APPLE_ISSUER_ID}
+      - APPLE_PRIVATE_KEY_PATH=/root/${APPLE_PRIVATE_KEY_FILENAME}
+      - APPLE_BUNDLE_ID=${APPLE_BUNDLE_ID}
+      - PORT=8080
+      - API_KEY=${API_KEY}
+    volumes:
+      - ./private_keys:/root/private_keys
+    restart: unless-stopped
